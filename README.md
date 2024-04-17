@@ -1,32 +1,26 @@
-# GROUP-NAME - lab NUMBER - variant NUMBER
+# Are u Hungry - lab 1 - variant 2
 
-This is an example project which demonstrates project structure and necessary
-CI checks. It is not the best structure for real-world projects, but good
-enough for educational purposes.
+This project implements a dynamic array data structure in Python. 
 
 ## Project structure
 
-- `foo.py` -- implementation of `Foo` class with `hello` and `add` features.
+- `dynamic_array.py` -- implementation of `DynamicArray` class with some features.
    Stateless.
-- `foo_test.py` -- unit and PBT tests for `Foo`.
+- `dynamic_array_test.py` -- unit tests for `DynamicArray`.
 
 ## Features
 
-- PBT: `test_add_commutative`
+- Initialize and add element
 
 ## Contribution
 
-- Aleksandr Penskoi (EMAIL) -- all work.
+- Yang Ao (1031901332@qq.com) -- half work.
 
 ## Changelog
 
-- 29.03.2022 - 2
-  - Add test coverage.
-- 29.03.2022 - 1
-  - Update README. Add formal sections.
-- 29.03.2022 - 0
-  - Initial
+- 16.04.2024 - 0
+    Initial implementation and test if the size of array is mutable.
 
 ## Design notes
 
-- ...
+- Create a Class called DynamicArray to implement the task.
