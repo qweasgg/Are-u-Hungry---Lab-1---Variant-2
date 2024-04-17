@@ -1,11 +1,12 @@
 # Are u Hungry - lab 1 - variant 2
 
-This project implements a dynamic array data structure in Python. 
+  This project implements a dynamic array data structure in Python.
+  A dynamic array is a resizable array that grows in size when an element is appended.
 
 ## Project structure
 
 - `dynamic_array.py` -- implementation of `DynamicArray` class with some features.
-   Stateless.
+
 - `dynamic_array_test.py` -- unit tests for `DynamicArray`.
 
 ## Features
@@ -19,7 +20,7 @@ This project implements a dynamic array data structure in Python.
 ## Changelog
 
 - 16.04.2024 - 0
-    Initial implementation and test if the size of array is mutable.
+  Initial implementation and test if the size of array is mutable.
 
 ## Design notes
 
