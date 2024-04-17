@@ -21,7 +21,8 @@
 ## Changelog
 
 - 17.04.2024 - 1
-  Implement other functions of dynamic arrays, such as reversing arrays, filtering data, map structure.
+  Implement other functions of dynamic arrays, such as reversing arrays,
+  filtering data, map structure.
 
 - 16.04.2024 - 0
   Initial implementation and test if the size of array is mutable.
