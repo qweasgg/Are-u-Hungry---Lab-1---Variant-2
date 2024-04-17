@@ -33,3 +33,58 @@ class DynamicArray:
             new_data[i] = self.data[i]
         self.data = new_data
         self.capacity = new_capacity
+
+    def remove(self, index):
+        self.length -= 1
+        for i in range(self.length):
+            if i >= index:
+                self.data[i] = self.data[i + 1]
+
+    def size(self):
+        return self.length
+
+    def is_member(self, value):
+        for i in range(self.length):
+            if self.data[i] == value:
+                return i
+        return -1
+
+    def reverse(self):
+        left = 0
+        right = self.length - 1
+        while left < right:
+            temp = self.data[left]
+            self.data[left] = self.data[right]
+            self.data[right] = temp
+            left += 1
+            right -= 1
+
+    def to_list(self):
+        return [self.data[i] for i in range(self.length)]
+
+    def from_list(cls, lst):
+        dynamic_array = cls(initial_capacity=len(lst))
+        for item in lst:
+            dynamic_array.append(item)
+        return dynamic_array
+
+    def filter(self, predicate):
+        filtered_array = DynamicArray()
+        for i in range(self.length):
+            if predicate(self.data[i]):
+                filtered_array.append(self.data[i])
+        return filtered_array
+
+    def map(self, function):
+        map_array = DynamicArray()
+        for i in range(self.length):
+            map_array.append(function(self.data[i]))
+        return map_array
+
+    def reduce(self, function):
+        reduce_array = DynamicArray()
+        value = self.data[0]
+        for i in range(self.length-1):
+            value = function(value, self.data[i + 1])
+        reduce_array.append(value)
+        return reduce_array
