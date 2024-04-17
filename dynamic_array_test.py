@@ -129,3 +129,24 @@ class TestDynamicArray(unittest.TestCase):
         reduce_array = dyn_array.reduce(sum)
         self.assertEqual(reduce_array.length, 1)
         self.assertEqual(reduce_array[0], 6)
+
+    def test_iterator(self):
+        dyn_array = DynamicArray()
+        dyn_array.append(1)
+        dyn_array.append(2)
+        dyn_array.append(3)
+        iterator = dyn_array.__iter__()
+        self.assertEqual(iterator.__next__(), 1)
+        self.assertEqual(iterator.__next__(), 2)
+        self.assertEqual(iterator.__next__(), 3)
+
+    def test_empty(self):
+        dyn_array = DynamicArray.empty()
+        self.assertEqual(dyn_array.length, 0)
+
+    def test_concat(self):
+        array1 = DynamicArray.from_list(DynamicArray, [12, 99, 37])
+        array2 = DynamicArray.from_list(DynamicArray, [1, 2, 3])
+        concatenated_array = DynamicArray.concat(array1, array2)
+        lst = concatenated_array.to_list()
+        self.assertEqual(lst, [12, 99, 37, 1, 2, 3])

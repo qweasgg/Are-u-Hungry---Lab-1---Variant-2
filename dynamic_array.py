@@ -88,3 +88,28 @@ class DynamicArray:
             value = function(value, self.data[i + 1])
         reduce_array.append(value)
         return reduce_array
+
+    def __iter__(self):
+        self._index = 0
+        return self
+
+    def __next__(self):
+        if self._index < self.length:
+            value = self.data[self._index]
+            self._index += 1
+            return value
+        else:
+            raise StopIteration
+
+    @classmethod
+    def empty(cls):
+        return cls()
+
+    def concat(self, other):
+        initial_capacity = self.length + other.length
+        concatenated_array = DynamicArray(initial_capacity=initial_capacity)
+        for item in self:
+            concatenated_array.append(item)
+        for item in other:
+            concatenated_array.append(item)
+        return concatenated_array

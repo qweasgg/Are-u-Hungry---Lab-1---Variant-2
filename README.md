@@ -20,6 +20,10 @@
 
 ## Changelog
 
+- 17.04.2024 - 2
+  Override the iteration method of the array.
+  Write the remaining API functions.
+
 - 17.04.2024 - 1
   Implement other functions of dynamic arrays, such as reversing arrays,
   filtering data, map structure.
