@@ -46,7 +46,7 @@ class TestDynamicArray(unittest.TestCase):
         dyn_array.append(3)
         dyn_array.remove(1)
         self.assertEqual(dyn_array.length, 2)
-        self.assertEqual(dyn_array[0], 1)
+        self.assertEqual(dyn_array[0], 2)
         self.assertEqual(dyn_array[1], 3)
 
     def test_size(self):

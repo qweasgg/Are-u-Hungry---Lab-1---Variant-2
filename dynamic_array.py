@@ -34,11 +34,18 @@ class DynamicArray:
         self.data = new_data
         self.capacity = new_capacity
 
-    def remove(self, index):
-        self.length -= 1
+    def remove(self, value):
+        index = -1
         for i in range(self.length):
-            if i >= index:
-                self.data[i] = self.data[i + 1]
+            if self.data[i] == value:
+                index = i
+                break
+        if index < 0:
+            raise ValueError("Value not found")
+        else:
+            for j in range(index, self.length - 1):
+                self.data[j] = self.data[j + 1]
+            self.length -= 1
 
     def size(self):
         return self.length
