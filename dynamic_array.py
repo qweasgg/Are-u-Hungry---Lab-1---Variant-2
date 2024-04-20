@@ -76,25 +76,22 @@ class DynamicArray:
         return dynamic_array
 
     def filter(self, predicate):
-        filtered_array = DynamicArray()
         for i in range(self.length):
             if predicate(self.data[i]):
-                filtered_array.append(self.data[i])
-        return filtered_array
+                continue
+            else:
+                self.remove(self.data[i])
 
     def map(self, function):
-        map_array = DynamicArray()
         for i in range(self.length):
-            map_array.append(function(self.data[i]))
-        return map_array
+            self.data[i] = function(self.data[i])
 
     def reduce(self, function):
-        reduce_array = DynamicArray()
         value = self.data[0]
-        for i in range(self.length-1):
+        for i in range(self.length - 1):
             value = function(value, self.data[i + 1])
-        reduce_array.append(value)
-        return reduce_array
+        self.data = [value]
+        self.length = 1
 
     def __iter__(self):
         self._index = 0
@@ -113,10 +110,5 @@ class DynamicArray:
         return cls()
 
     def concat(self, other):
-        initial_capacity = self.length + other.length
-        concatenated_array = DynamicArray(initial_capacity=initial_capacity)
-        for item in self:
-            concatenated_array.append(item)
         for item in other:
-            concatenated_array.append(item)
-        return concatenated_array
+            self.append(item)
