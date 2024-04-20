@@ -24,6 +24,12 @@
 
 ## Changelog
 
+- 19.04.2024 - 4
+  Fix issues for implement in mutable way.
+  Add PBT tests.
+  Add black . in chack.yml to format code
+  Update README file.
+
 - 18.04.2024 - 3
   Modify the implementation of function remove.
   Update README file.
