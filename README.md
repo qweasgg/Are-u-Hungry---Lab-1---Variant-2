@@ -24,6 +24,10 @@
 
 ## Changelog
 
+- 19.04.2024 - 5
+  Add PBT tests for Associativity and Identity element.
+  Update README file.
+
 - 19.04.2024 - 4
   Fix issues for implement in mutable way.
   Add PBT tests.
