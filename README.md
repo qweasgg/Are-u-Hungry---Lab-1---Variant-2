@@ -24,6 +24,9 @@
 
 ## Changelog
 
+- 04.05.2024 - 6
+  Add static typing and use --strict for mypy
+
 - 19.04.2024 - 5
   Add PBT tests for Associativity and Identity element.
   Update README file.
